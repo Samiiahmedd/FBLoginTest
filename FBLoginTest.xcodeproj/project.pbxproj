@@ -11,6 +11,8 @@
 		26BB9F972AE7C326004856D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB9F962AE7C326004856D9 /* ContentView.swift */; };
 		26BB9F992AE7C328004856D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BB9F982AE7C328004856D9 /* Assets.xcassets */; };
 		26BB9F9C2AE7C328004856D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BB9F9B2AE7C328004856D9 /* Preview Assets.xcassets */; };
+		26BB9FA42AE7C5E7004856D9 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 26BB9FA32AE7C5E7004856D9 /* FacebookLogin */; };
+		26D8005A2AE8722400CFD44F /* loggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D800592AE8722400CFD44F /* loggedInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		26BB9F962AE7C326004856D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		26BB9F982AE7C328004856D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26BB9F9B2AE7C328004856D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		26BB9FB32AE7E013004856D9 /* FBLoginTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FBLoginTest.entitlements; sourceTree = "<group>"; };
+		26D800592AE8722400CFD44F /* loggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggedInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BB9FA42AE7C5E7004856D9 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +56,12 @@
 		26BB9F932AE7C326004856D9 /* FBLoginTest */ = {
 			isa = PBXGroup;
 			children = (
+				26BB9FB32AE7E013004856D9 /* FBLoginTest.entitlements */,
 				26BB9F942AE7C326004856D9 /* FBLoginTestApp.swift */,
 				26BB9F962AE7C326004856D9 /* ContentView.swift */,
 				26BB9F982AE7C328004856D9 /* Assets.xcassets */,
 				26BB9F9A2AE7C328004856D9 /* Preview Content */,
+				26D800592AE8722400CFD44F /* loggedInView.swift */,
 			);
 			path = FBLoginTest;
 			sourceTree = "<group>";
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = FBLoginTest;
+			packageProductDependencies = (
+				26BB9FA32AE7C5E7004856D9 /* FacebookLogin */,
+			);
 			productName = FBLoginTest;
 			productReference = 26BB9F912AE7C326004856D9 /* FBLoginTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 26BB9F882AE7C326004856D9;
+			packageReferences = (
+				26BB9FA22AE7C5E7004856D9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 26BB9F922AE7C326004856D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BB9F972AE7C326004856D9 /* ContentView.swift in Sources */,
+				26D8005A2AE8722400CFD44F /* loggedInView.swift in Sources */,
 				26BB9F952AE7C326004856D9 /* FBLoginTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,12 +278,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FBLoginTest/FBLoginTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FBLoginTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 587KJ2SYVV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FBLoginTest/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +310,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FBLoginTest/FBLoginTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FBLoginTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 587KJ2SYVV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FBLoginTest/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26BB9FA22AE7C5E7004856D9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 16.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26BB9FA32AE7C5E7004856D9 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26BB9FA22AE7C5E7004856D9 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26BB9F892AE7C326004856D9 /* Project object */;
 }
